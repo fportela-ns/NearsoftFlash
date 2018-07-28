@@ -1,38 +1,39 @@
 .slide-canvas {
-    width: 75%;
+  width: 75%;
+  display: flex;
+  flex-flow: row;
+  &--left {
+    width: 28%;
+    background-color: #f1f1f1;
+  }
+  &--right {
+    width: 72%;
     display: flex;
-    flex-flow: row;
-    &--left {
-        width: 28%;
-        background-color: #f1f1f1;
+    flex-direction: column;
+    .main {
+      height: 80%;
+      background-color: #e0e0e0;
+      //this is for the draggable elements
+      position: relative;
     }
-    &--right {
-        width: 72%;
-        display: flex;
-        flex-direction: column;
-        .main {
-            height: 80%;
-            background-color: #e0e0e0;
-            //this is for the draggable elements
-            position: relative;
-        }
-        .footer {
-            height: 20%;
-            background-color: #cacaca;
-        }
+    .footer {
+      height: 20%;
+      background-color: #cacaca;
     }
+  }
 
-    &--container-empty, &--empty {
-        height: 100%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        padding: 10px;
-        text-align: center;
-        width: 100%;
-    }
+  &--container-empty,
+  &--empty {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    text-align: center;
+    width: 100%;
+  }
 
-    &--container-empty {
-        width: 75%;        
-    }
+  &--container-empty {
+    width: 75%;
+  }
 }
